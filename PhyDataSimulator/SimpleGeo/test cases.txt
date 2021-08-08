@@ -1,0 +1,162 @@
+#""""""#  test cases
+#
+#""""""D:\test1\Scripts\python.exe "C:\Program Files\JetBrains\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevconsole.py" --mode=client --port=53410
+#import sys; print('Python %s on %s' % (sys.version, sys.platform))
+"""sys.path.extend(['C:\\Users\\Mili\\PycharmProjects\\SimpleGeo', 'C:/Users/Mili/PycharmProjects/SimpleGeo'])
+Python 3.9.0 (tags/v3.9.0:9cf6752, Oct  5 2020, 15:23:07) [MSC v.1927 32 bit (Intel)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.19.0 -- An enhanced Interactive Python. Type '?' for help.
+PyDev console: using IPython 7.19.0
+Python 3.9.0 (tags/v3.9.0:9cf6752, Oct  5 2020, 15:23:07) [MSC v.1927 32 bit (Intel)] on win32
+runfile('C:/Users/Mili/PycharmProjects/SimpleGeo/geometry.py', wdir='C:/Users/Mili/PycharmProjects/SimpleGeo')
+a = Circle([0,0],10,"ws")
+b = Line([[20,20],[30,45]],'wdf')
+a.LineRelation(b)
+Out[5]: 'separate'
+a.LineCrossPos(b)
+a.get_y(9)
+Out[7]: [-sqrt(19), sqrt(19)]
+a.get_x(10)
+Out[8]: [0]
+c = Line([[0,0],[1,1]],'sss')
+c.Boundarylization()
+Traceback (most recent call last):
+File "C:Users\Mili\AppData\Roaming\Python\Python39\site-packages\IPython\core\interactiveshell.py", line 3418, in run_code
+exec(code_obj, self.user_global_ns, self.user_ns)
+File "<ipython-input-10-2133b3c2398d>", line 1, in <module>
+c.Boundarylization()
+File "C:/Users/Mili/PycharmProjects/SimpleGeo/geometry.py", line 211, in Boundarylization
+self.boundary = [min(*boundary), max(*boundary)]
+TypeError: min expected at least 1 argument, got 0
+c.Boundarylization([-1,1])
+c.boundary
+Out[12]: [-1, 1]
+a.LineRelation(c)
+Out[13]: 'separate'
+c.Boundarylization([-100,100])
+a.LineRelation(c)
+Out[15]: 'separate'
+c.boundary
+Out[16]: [-100, 100]
+c.get_y(10)
+Out[17]: 10.0
+c.OnLine([1,1])
+Out[18]: [True]
+c.OnLine([[0,0],[2,2]])
+Traceback (most recent call last):
+File "C:Users\Mili\AppData\Roaming\Python\Python39\site-packages\IPython\core\interactiveshell.py", line 3418, in run_code
+exec(code_obj, self.user_global_ns, self.user_ns)
+File "<ipython-input-19-6808767d8a69>", line 1, in <module>
+c.OnLine([[0,0],[2,2]])
+File "C:/Users/Mili/PycharmProjects/SimpleGeo/geometry.py", line 166, in OnLine
+if abs(self.get_y(point[0]) - point[1]) <= 1e-6 and self.boundary[0] <= point[0] <= self.boundary[1]:
+File "C:/Users/Mili/PycharmProjects/SimpleGeo/geometry.py", line 135, in get_y
+return self.k * (x - self._x1) + self._y1 if self.k != inf else inf
+TypeError: unsupported operand type(s) for -: 'list' and 'int'
+c.OnLine([0,0],[1,1],[101,101])
+Out[20]: [True, True, False]
+c.OnLine([0,0],[1,1]) == [True, True]
+Out[21]: True
+a
+Out[22]: <__main__.Circle at 0xe080fb8>
+a.LineCrossPos(c)
+a.LineRelation(c)
+Out[24]: 'separate'
+c.Boundarylization([-100000],[10000])
+a.LineRelation(c)
+Out[26]: 'separate'
+D:\test1\Scripts\python.exe "C:\Program Files\JetBrains\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevconsole.py" --mode=client --port=55291
+import sys; print('Python %s on %s' % (sys.version, sys.platform))
+sys.path.extend(['C:\\Users\\Mili\\PycharmProjects\\SimpleGeo', 'C:/Users/Mili/PycharmProjects/SimpleGeo'])
+Python 3.9.0 (tags/v3.9.0:9cf6752, Oct  5 2020, 15:23:07) [MSC v.1927 32 bit (Intel)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.19.0 -- An enhanced Interactive Python. Type '?' for help.
+PyDev console: using IPython 7.19.0
+Python 3.9.0 (tags/v3.9.0:9cf6752, Oct  5 2020, 15:23:07) [MSC v.1927 32 bit (Intel)] on win32
+runfile('C:/Users/Mili/PycharmProjects/SimpleGeo/geometry.py', wdir='C:/Users/Mili/PycharmProjects/SimpleGeo')
+a = [1,2,3,4,5]
+a[2:3]
+Out[4]: [3]
+type(2:3)
+File "<ipython-input-5-7cc51873882c>", line 1
+type(2:3)
+      ^
+SyntaxError: invalid syntax
+a.__getitem__(2:3)
+File "<ipython-input-6-ad8522b6c310>", line 1
+a.__getitem__(2:3)
+               ^
+SyntaxError: invalid syntax
+a.__getitem__(2)
+Out[7]: 3
+a.__getitem__(2,3)
+Traceback (most recent call laD:\test1\Scripts\python.exe "C:\Program Files\JetBrains\PyCharm 2020.2.3\plugins\python\helpers\pydev\pydevconsole.py" --mode=client --port=55291
+import sys; print('Python %s on %s' % (sys.version, sys.platform))
+sys.path.extend(['C:\\Users\\Mili\\PycharmProjects\\SimpleGeo', 'C:/Users/Mili/PycharmProjects/SimpleGeo'])
+Python 3.9.0 (tags/v3.9.0:9cf6752, Oct  5 2020, 15:23:07) [MSC v.1927 32 bit (Intel)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.19.0 -- An enhanced Interactive Python. Type '?' for help.
+PyDev console: using IPython 7.19.0
+Python 3.9.0 (tags/v3.9.0:9cf6752, Oct  5 2020, 15:23:07) [MSC v.1927 32 bit (Intel)] on win32
+runfile('C:/Users/Mili/PycharmProjects/SimpleGeo/geometry.py', wdir='C:/Users/Mili/PycharmProjects/SimpleGeo')
+a = [1,2,3,4,5]
+a[2:3]
+Out[4]: [3]
+type(2:3)
+File "<ipython-input-5-7cc51873882c>", line 1
+type(2:3)
+      ^
+SyntaxError: invalid syntax
+a.__getitem__(2:3)
+File "<ipython-input-6-ad8522b6c310>", line 1
+a.__getitem__(2:3)
+               ^
+SyntaxError: invalid syntax
+a.__getitem__(2)
+Out[7]: 3
+a.__getitem__(2,3)
+Traceback (most recent call last):
+File "C:\Users\Mili\AppData\Roaming\Python\Python39\site-packages\IPython\core\interactiveshell.py", line 3418, in run_code
+exec(code_obj, self.user_global_ns, self.user_ns)
+File "<ipython-input-8-48c239f734bf>", line 1, in <module>
+a.__getitem__(2,3)
+TypeError: list.__getitem__() takes exactly one argument (2 given)
+a = [1,2,3,4]
+a.__getitem__(2)
+Out[10]: 3
+a.__getitem__(2:3)
+File "<ipython-input-11-ad8522b6c310>", line 1
+a.__getitem__(2:3)
+               ^
+SyntaxError: invalid syntax
+a.__class_getitem__(1)
+Out[12]: list[1]
+a.__class_getitem__(2:3)
+File "<ipython-input-13-cdc7fee07f5e>", line 1
+a.__class_getitem__(2:3)
+                     ^
+SyntaxError: invalid syntax
+进程已结束，退出代码 0st):
+File "C: Users\Mildi\pffAfppData\Roaming\Python\Python39\site-packages\IPython\core\interactiveshell.py", line 3418, in run_code
+exec(code_obj, self.user_global_ns, self.user_ns)
+File "<ipython-input-8-48c239f734bf>", line 1, in <module>
+a.__getitem__(2,3)
+TypeError: list.__getitem__() takes exactly one argument (2 given)
+a = [1,2,3,4]
+a.__getitem__(2)
+Out[10]: 3
+a.__getitem__(2:3)
+File "<ipython-input-11-ad8522b6c310>", line 1
+a.__getitem__(2:3)
+               ^
+SyntaxError: invalid syntax
+a.__class_getitem__(1)
+Out[12]: list[1]
+a.__class_getitem__(2:3)
+File "<ipython-input-13-cdc7fee07f5e>", line 1
+a.__class_getitem__(2:3)
+                     ^
+SyntaxError: invalid syntax
+
+""""""
+""""""""
